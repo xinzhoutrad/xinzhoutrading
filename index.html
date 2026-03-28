@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Hong Kong Xinzhou Trading Co. Limited | Wholesale Apparel, Footwear & Accessories</title>
+  <meta name="description" content="Hong Kong Xinzhou Trading Co. Limited - Premium wholesale supplier of apparel, footwear and accessories. Competitive bulk pricing, low MOQs, fast shipping.">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; background-color: #f8fafc; color: #0a2540; line-height: 1.5; scroll-behavior: smooth; }
+    .container { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
+    .top-bar { background-color: #0b2b40; color: #f0f6f0; padding: 10px 0; font-size: 0.85rem; }
+    .top-bar .container { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+    .top-contact span { margin-right: 20px; }
+    .main-header { background-color: #ffffff; box-shadow: 0 4px 12px rgba(0,0,0,0.02); position: sticky; top: 0; z-index: 100; }
+    .header-flex { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; padding: 20px 0; gap: 20px; }
+    .logo h1 { font-size: 1.6rem; font-weight: 800; color: #0f2b3d; }
+    .logo p { font-size: 0.7rem; font-weight: 500; color: #2c7da0; }
+    .nav-links { display: flex; gap: 32px; font-weight: 600; }
+    .nav-links a { text-decoration: none; color: #1e3a5f; transition: 0.2s; }
+    .nav-links a:hover, .nav-links a.active { color: #d62828; }
+    .header-cta .btn-outline { border: 2px solid #d62828; padding: 8px 20px; border-radius: 40px; font-weight: 700; background: transparent; color: #d62828; text-decoration: none; display: inline-block; }
+    .header-cta .btn-outline:hover { background: #d62828; color: white; }
+    .hero { background: linear-gradient(105deg, #ffffff 0%, #eef2f5 100%); padding: 60px 0 50px; }
+    .hero-grid { display: flex; flex-wrap: wrap; align-items: center; gap: 40px; }
+    .hero-text { flex: 1; }
+    .hero-text .badge { background: #d62828; color: white; padding: 5px 14px; border-radius: 30px; display: inline-block; margin-bottom: 20px; font-size: 0.8rem; font-weight: 700; }
+    .hero-text h2 { font-size: 2.8rem; font-weight: 800; line-height: 1.2; margin-bottom: 20px; }
+    .hero-stats { display: flex; gap: 30px; margin-top: 20px; }
+    .hero-stats span { font-size: 1.4rem; color: #d62828; display: block; font-weight: 700; }
+    .hero-image { flex: 1; text-align: center; background: white; border-radius: 28px; padding: 20px; box-shadow: 0 20px 30px -12px rgba(0,0,0,0.1); }
+    .hero-image img { max-width: 100%; border-radius: 16px; width: 100%; height: auto; }
+    .section-title { text-align: center; margin: 60px 0 40px; }
+    .section-title h3 { font-size: 2rem; font-weight: 800; margin-bottom: 12px; }
+    .product-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 32px; margin-bottom: 60px; }
+    .product-card { background: white; border-radius: 24px; overflow: hidden; transition: 0.25s; box-shadow: 0 8px 20px rgba(0,0,0,0.05); border: 1px solid #eef2f6; }
+    .product-card:hover { transform: translateY(-6px); box-shadow: 0 20px 30px -12px rgba(0,0,0,0.12); }
+    .product-img { height: 240px; overflow: hidden; background: #f9fafb; display: flex; align-items: center; justify-content: center; }
+    .product-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s; }
+    .product-card:hover .product-img img { transform: scale(1.02); }
+    .product-info { padding: 20px; }
+    .product-info h4 { font-size: 1.2rem; font-weight: 700; margin-bottom: 8px; }
+    .product-category { font-size: 0.7rem; color: #d62828; text-transform: uppercase; font-weight: 700; letter-spacing: 1px; margin-bottom: 12px; }
+    .price-moq { background: #f1f5f9; padding: 12px; border-radius: 16px; margin: 16px 0; }
+    .wholesale-price { font-weight: 800; font-size: 1.2rem; color: #0f2b3d; }
+    .moq { font-size: 0.8rem; color: #2c7da0; font-weight: 600; margin-top: 5px; }
+    .btn-product { width: 100%; background: transparent; border: 1.5px solid #0b2b40; padding: 12px; border-radius: 40px; font-weight: 700; cursor: pointer; transition: 0.2s; margin-top: 12px; font-size: 0.9rem; }
+    .btn-product:hover { background: #0b2b40; color: white; }
+    .address-banner { background-color: #0a2540; color: white; padding: 40px 0; margin: 20px 0 40px; border-radius: 32px; }
+    .address-flex { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 30px; }
+    .address-details i { font-size: 1.6rem; margin-right: 12px; color: #ffb347; }
+    .contact-section { display: flex; flex-wrap: wrap; gap: 48px; margin: 60px 0; background: white; border-radius: 32px; padding: 40px; border: 1px solid #e9edf2; }
+    .contact-form { flex: 1.2; }
+    .contact-form h4 { font-size: 1.6rem; margin-bottom: 20px; }
+    .form-group { margin-bottom: 20px; }
+    .form-group input, .form-group textarea { width: 100%; padding: 14px 18px; border: 1px solid #cbd5e1; border-radius: 28px; font-family: inherit; font-size: 0.95rem; }
+    .btn-submit { background: #d62828; border: none; padding: 14px 28px; border-radius: 40px; font-weight: 700; color: white; cursor: pointer; font-size: 1rem; }
+    .btn-submit:hover { background: #b11f1f; }
+    .contact-info { flex: 1; background: #f8fafc; padding: 28px; border-radius: 28px; }
+    .contact-info ul { list-style: none; margin-top: 24px; }
+    .contact-info li { margin-bottom: 20px; display: flex; align-items: center; gap: 14px; }
+    .contact-info i { width: 32px; font-size: 1.4rem; color: #d62828; }
+    .map-placeholder { margin-top: 30px; background: #e2e8f0; border-radius: 20px; height: 140px; display: flex; align-items: center; justify-content: center; border: 1px dashed #94a3b8; }
+    footer { background: #0f172a; color: #cbd5e1; padding: 48px 0 24px; margin-top: 40px; }
+    .footer-grid { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 32px; margin-bottom: 40px; }
+    .footer-col h5 { color: white; margin-bottom: 18px; }
+    .footer-col p, .footer-col a { color: #94a3b8; text-decoration: none; line-height: 1.6; }
+    .footer-col a:hover { color: #facc15; }
+    .copyright { border-top: 1px solid #1e293b; padding-top: 24px; text-align: center; font-size: 0.8rem; }
+    @media (max-width: 768px) {
+      .hero-text h2 { font-size: 2rem; }
+      .product-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+<div class="top-bar">
+  <div class="container">
+    <div class="top-contact"><span><i class="fas fa-phone-alt"></i> +852 1234 5678</span><span><i class="far fa-envelope"></i> sales@xinzhoutrading.hk</span></div>
+    <div><i class="fas fa-building"></i> Hong Kong Wholesale Distributor</div>
+  </div>
+</div>
+<header class="main-header">
+  <div class="container header-flex">
+    <div class="logo"><h1>Hong Kong Xinzhou Trading Co. Limited</h1><p>Wholesale · Apparel · Footwear · Accessories</p></div>
+    <div class="nav-links"><a href="#" class="active">Home</a><a href="#products">Catalog</a><a href="#contact">Contact</a><a href="#company">Company</a></div>
+    <div class="header-cta"><a href="#contact" class="btn-outline"><i class="fas fa-dollar-sign"></i> Get Wholesale Quote</a></div>
+  </div>
+</header>
+<main>
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-text">
+        <div class="badge">🇭🇰 HONG KONG BASED SUPPLIER</div>
+        <h2>Bulk fashion wholesale <br>with low MOQs</h2>
+        <p>Premium apparel, footwear & accessories at factory-direct prices. Fast shipping worldwide. <strong>Over 20+ collections ready to ship!</strong></p>
+        <div class="hero-stats"><div><span>8+</span> Years</div><div><span>300+</span> B2B partners</div><div><span>24h</span> Quick response</div></div>
+      </div>
+      <div class="hero-image"><img src="images/hero.jpg" alt="Wholesale fashion" onerror="this.src='https://placehold.co/600x400?text=Wholesale+Fashion'"></div>
+    </div>
+  </section>
+  <div class="container" id="products">
+    <div class="section-title"><h3>🔥 Wholesale collection — 22 bestsellers</h3><p>Wholesale pricing & low MOQ tailored for retailers, boutiques & online sellers.</p></div>
+    <div class="product-grid" id="dynamic-product-grid"></div>
+  </div>
+  <div class="container" id="company">
+    <div class="address-banner">
+      <div class="address-flex">
+        <div class="address-details"><i class="fas fa-building"></i><p><strong>Hong Kong Xinzhou Trading Co. Limited</strong> — Wholesale headquarters</p><p><i class="fas fa-map-marker-alt"></i> ROOM D5 5/F KING YIP FACTORY BUILDING, 59 KING YIP STREET, KWUN TONG, KOWLOON, HONG KONG</p><p><i class="fas fa-clock"></i> Mon - Fri: 9:00 AM – 6:00 PM (HKT)</p></div>
+        <div><i class="fas fa-phone"></i> +852 1234 5678<br><i class="far fa-envelope"></i> info@xinzhoutrading.hk</div>
+      </div>
+    </div>
+  </div>
+  <div class="container" id="contact">
+    <div class="contact-section">
+      <div class="contact-form"><h4>Request wholesale pricing</h4><p>Get full catalog, MOQ details & volume discounts.</p>
+        <form id="wholesaleForm"><div class="form-group"><input type="text" placeholder="Full name *" required id="name"></div><div class="form-group"><input type="email" placeholder="Business email *" required id="email"></div><div class="form-group"><input type="text" placeholder="Company / Store name" id="companyName"></div><div class="form-group"><textarea rows="3" placeholder="Which products are you interested in? (style, quantity)" id="message"></textarea></div><button type="submit" class="btn-submit"><i class="fas fa-paper-plane"></i> Send inquiry</button></form>
+      </div>
+      <div class="contact-info"><h4><i class="fas fa-warehouse"></i> Direct sourcing</h4><ul><li><i class="fas fa-dollar-sign"></i> <strong>Wholesale price list</strong> — available upon request</li><li><i class="fas fa-chart-line"></i> <strong>Low MOQ for startups</strong> — flexible terms</li><li><i class="fas fa-shipping-fast"></i> <strong>Warehouse in HK</strong> — quick fulfillment</li><li><i class="fas fa-clipboard-list"></i> <strong>Custom labels/ private label</strong> offered</li></ul><div class="map-placeholder"><i class="fas fa-map-pin"></i> ROOM D5 5/F KING YIP FACTORY BUILDING, 59 KING YIP STREET, KWUN TONG, KL — showroom by appointment</div></div>
+    </div>
+  </div>
+</main>
+<footer>
+  <div class="container"><div class="footer-grid"><div class="footer-col"><h5>Hong Kong Xinzhou Trading Co. Limited</h5><p>Trusted wholesale partner for apparel, footwear & accessories.<br>Established 2016.</p></div><div class="footer-col"><h5>Quick Links</h5><p><a href="#">Home</a></p><p><a href="#products">Products catalog</a></p><p><a href="#contact">Wholesale inquiry</a></p></div><div class="footer-col"><h5>Contact Info</h5><p><i class="fas fa-map-marker-alt"></i> ROOM D5 5/F KING YIP FACTORY BUILDING, 59 KING YIP STREET, KWUN TONG, KL, HONG KONG</p><p><i class="fas fa-phone"></i> +852 1234 5678</p><p><i class="far fa-envelope"></i> sales@xinzhoutrading.hk</p></div><div class="footer-col"><h5>Follow Us</h5><p><i class="fab fa-instagram"></i> @xinzhoutrading</p><p><i class="fab fa-linkedin"></i> Xinzhou Trading</p></div></div><div class="copyright"><p>© 2025 Hong Kong Xinzhou Trading Co. Limited — Wholesale apparel & accessories. All prices are in USD, EXW Hong Kong. MOQ applies per style.</p></div></div>
+</footer>
+
+<script>
+  // 产品数据 - 图片路径指向本地 images 文件夹
+  const products = [
+    { name: "Classic Denim Jeans", category: "Apparel / Bottoms", price: "$14.90", moq: "MOQ: 100 pcs", img: "images/jeans.jpg" },
+    { name: "Urban Running Shoes", category: "Footwear / Athletic", price: "$22.50", moq: "MOQ: 50 pairs", img: "images/running_shoes.jpg" },
+    { name: "Aviator Sunglasses", category: "Accessories / Eyewear", price: "$5.95", moq: "MOQ: 200 pcs", img: "images/sunglasses.jpg" },
+    { name: "Premium Cotton Tee", category: "Apparel / Tops", price: "$6.75", moq: "MOQ: 120 pcs", img: "images/tshirt.jpg" },
+    { name: "Leather Chelsea Boots", category: "Footwear / Boots", price: "$38.90", moq: "MOQ: 60 pairs", img: "images/chelsea_boots.jpg" },
+    { name: "Minimalist Steel Watch", category: "Accessories / Watches", price: "$28.40", moq: "MOQ: 80 pcs", img: "images/watch.jpg" },
+    { name: "Oversized Hoodie", category: "Apparel / Sweatshirts", price: "$19.20", moq: "MOQ: 90 pcs", img: "images/hoodie.jpg" },
+    { name: "Slim Fit Chino Pants", category: "Apparel / Bottoms", price: "$16.30", moq: "MOQ: 100 pcs", img: "images/chinos.jpg" },
+    { name: "Leather Crossbody Bag", category: "Accessories / Bags", price: "$24.50", moq: "MOQ: 70 pcs", img: "images/crossbody_bag.jpg" },
+    { name: "Running Shorts", category: "Apparel / Activewear", price: "$11.25", moq: "MOQ: 150 pcs", img: "images/running_shorts.jpg" },
+    { name: "Italian Leather Belt", category: "Accessories / Belts", price: "$8.90", moq: "MOQ: 120 pcs", img: "images/belt.jpg" },
+    { name: "Snapback Cap", category: "Accessories / Headwear", price: "$5.50", moq: "MOQ: 200 pcs", img: "images/cap.jpg" },
+    { name: "Stiletto Heels", category: "Footwear / Heels", price: "$32.00", moq: "MOQ: 50 pairs", img: "images/heels.jpg" },
+    { name: "Summer Slide Sandals", category: "Footwear / Casual", price: "$12.80", moq: "MOQ: 80 pairs", img: "images/sandals.jpg" },
+    { name: "Canvas Backpack", category: "Accessories / Bags", price: "$15.40", moq: "MOQ: 100 pcs", img: "images/backpack.jpg" },
+    { name: "Wool Blend Scarf", category: "Accessories / Scarves", price: "$7.20", moq: "MOQ: 150 pcs", img: "images/scarf.jpg" },
+    { name: "Oxford Dress Shoes", category: "Footwear / Formal", price: "$44.90", moq: "MOQ: 40 pairs", img: "images/oxfords.jpg" },
+    { name: "Seamless Sports Bra", category: "Apparel / Activewear", price: "$9.50", moq: "MOQ: 120 pcs", img: "images/sports_bra.jpg" },
+    { name: "Denim Jacket", category: "Apparel / Outerwear", price: "$27.90", moq: "MOQ: 75 pcs", img: "images/denim_jacket.jpg" },
+    { name: "Gold Plated Necklace", category: "Accessories / Jewelry", price: "$6.25", moq: "MOQ: 200 pcs", img: "images/necklace.jpg" },
+    { name: "Yoga Leggings", category: "Apparel / Activewear", price: "$13.20", moq: "MOQ: 100 pcs", img: "images/leggings.jpg" },
+    { name: "Leather Biker Jacket", category: "Apparel / Outerwear", price: "$68.50", moq: "MOQ: 30 pcs", img: "images/biker_jacket.jpg" }
+  ];
+
+  function renderProducts() {
+    const grid = document.getElementById('dynamic-product-grid');
+    if (!grid) return;
+    grid.innerHTML = '';
+    products.forEach(prod => {
+      const card = document.createElement('div');
+      card.className = 'product-card';
+      // 添加 onerror 备用，若本地图片缺失则显示占位文字
+      const imgError = `this.onerror=null; this.src='https://placehold.co/600x400?text=${encodeURIComponent(prod.name)}'`;
+      card.innerHTML = `
+        <div class="product-img"><img src="${prod.img}" alt="${prod.name}" onerror="${imgError}"></div>
+        <div class="product-info">
+          <h4>${prod.name}</h4>
+          <div class="product-category">${prod.category}</div>
+          <div class="price-moq">
+            <div class="wholesale-price">${prod.price} / unit</div>
+            <div class="moq"><i class="fas fa-boxes"></i> ${prod.moq}</div>
+            <div style="font-size:0.7rem; margin-top:6px;">*Volume pricing available</div>
+          </div>
+          <button class="btn-product" onclick="alert('Request quote for ${prod.name} (wholesale). Contact sales@xinzhoutrading.hk or +852 1234 5678.')">Request Quote <i class="fas fa-arrow-right"></i></button>
+        </div>
+      `;
+      grid.appendChild(card);
+    });
+  }
+
+  // 表单提交
+  document.addEventListener('DOMContentLoaded', function() {
+    renderProducts();
+    const form = document.getElementById('wholesaleForm');
+    if (form) {
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const name = document.getElementById('name')?.value.trim();
+        const email = document.getElementById('email')?.value.trim();
+        if (!name || !email) { alert('Please enter your name and business email.'); return; }
+        alert(`Thank you ${name}! Your wholesale inquiry has been received. Our team will reply within 24 hours.`);
+        form.reset();
+      });
+    }
+    // 平滑滚动
+    document.querySelectorAll('.nav-links a, .header-cta a, .footer-col a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        const href = this.getAttribute('href');
+        if (href && href.startsWith('#')) {
+          const targetId = href.substring(1);
+          const target = document.getElementById(targetId);
+          if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); }
+        }
+      });
+    });
+  });
+</script>
+</body>
+</html>
